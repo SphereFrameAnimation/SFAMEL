@@ -1,12 +1,12 @@
-## Documentation
+# Documentation
 
-# sfa_zct()
+### sfa_zct()
 Full Name: Zero Control Transforms
 Params: None
 Returns: 0
 Function: Takes the Transform Matrix of each selected object and transfers it into that object's Offset Parent Matrix before resetting its local transforms. This is used in rigging to zero-out controls while maintaining their local orientation.
 
-# sfa_rzct()
+### sfa_rzct()
 Full Name: Reverse Zero Control Transforms
 Params: None
 Returns: 0
