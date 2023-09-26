@@ -1,0 +1,17 @@
+global proc int sfa_rzct()
+{
+    
+    string $selection[] = `ls -sl`;
+    
+    for($obj in $selection)
+    {
+        
+        float $opm[] = getAttr ($obj + ".offsetParentMatrix");
+        xform -m $opm[0] $opm[1] $opm[2] $opm[3] $opm[4] $opm[5] $opm[6] $opm[7] $opm[8] $opm[9] $opm[10] $opm[11] $opm[12] $opm[13] $opm[14] $opm[15] $obj;
+        setAttr -type "matrix" ($obj + ".offsetParentMatrix") 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+        
+    }
+    
+    return 0;
+    
+}
